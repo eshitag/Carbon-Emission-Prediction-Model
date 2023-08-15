@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Agriculture</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Toggle Styles */
+
+#viewport {
+  padding-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #37474F;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: #263238;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar header a:hover {
+  color: #fff;
+}
+
+#sidebar .nav{
+  
+}
+
+#sidebar .nav a{
+  background: none;
+  border-bottom: 1px solid #455A64;
+  color: #CFD8DC;
+  font-size: 14px;
+  padding: 16px 24px;
+}
+
+#sidebar .nav a:hover{
+  background: none;
+  color: #ECEFF1;
+}
+
+#sidebar .nav a i{
+  margin-right: 16px;
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="viewport">
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <header>
+      <a href="/"><h4>Agriculture Supply Chain optimization</h4></a>
+    </header>
+    <ul class="nav">
+      <li>
+        <a href="/">
+          <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="/yield">
+          <i class="zmdi zmdi-link"></i> Yield prediction
+        </a>
+      </li>
+      <li>
+        <a href="/emission">
+          <i class="zmdi zmdi-widgets"></i> Emission prediction
+        </a>
+      </li>
+      <li>
+        <a href="/logistics">
+          <i class="zmdi zmdi-calendar"></i> Logistics Calculator
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Content -->
+  <div id="content">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
+            </a>
+          </li>
+          <li><a href="#"> User</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      
+      <p>
+        CultivateSuccess: Harnessing AI for Precision Agriculture Predictions and Optimal Crop Yield Strategies 
+        
+      </p>
+
+      <div class="container-fluid mt-4" id="logistics-form">
+        <h1>Delivery Cost Prediction</h1>
+        <form action="/predictLogistics" method="post">
+            <label for="origin">Origin:</label>
+            <select id="origin" name="origin" required>
+                <option value="City A">City A</option>
+                <option value="City B">City B</option>
+                <option value="City C">City C</option>
+                <!-- Add other origin options here -->
+            </select><br>
+    
+            <label for="destination">Destination:</label>
+            <select id="destination" name="destination" required>
+                <option value="City D">City D</option>
+                <option value="City E">City E</option>
+                <option value="City F">City F</option>
+                <!-- Add other destination options here -->
+            </select><br>
+    
+            <label for="weather">Weather Conditions:</label>
+            <select id="weather" name="weather" required>
+                <option value="Rainy">Rainy</option>
+                <option value="Sunny">Sunny</option>
+                <option value="Cloudy">Cloudy</option>
+                <!-- Add other weather options here -->
+            </select><br>
+    
+            <label for="product">Product Type:</label>
+            <select id="product" name="product" required>
+                <option value="maize">maize</option>
+                <option value="wheat">wheat</option>
+                <option value="rice">rice</option>
+                <!-- Add other product options here -->
+            </select><br>
+    
+            <label for="quantity">Quantity(kilograms):</label>
+            <input type="number" id="quantity" name="quantity" required><br>
+    
+            <label for="season">Season:</label>
+            <select id="season" name="season" required>
+                <option value="Summer">Summer</option>
+                <option value="Winter">Winter</option>
+                <option value="Spring">Spring</option>
+                <option value="Autumn">Autumn</option>
+                <!-- Add other season options here -->
+            </select><br>
+    
+            <label for="transport_mode">Transport Mode:</label>
+            <select id="transport_mode" name="transport_mode" required>
+                <option value="Train">Train</option>
+                <option value="Truck">Truck</option>
+                <option value="Ship">Ship</option>
+                <option value="Air">Air</option>
+                <!-- Add other transport mode options here -->
+            </select><br>
+    
+            <button type="submit">Predict Cost</button>
+        </form>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

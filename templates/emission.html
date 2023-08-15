@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Agriculture</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css'>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Toggle Styles */
+
+#viewport {
+  padding-left: 250px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+
+/* Sidebar Styles */
+
+#sidebar {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #37474F;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: #263238;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar header a:hover {
+  color: #fff;
+}
+
+#sidebar .nav{
+  
+}
+
+#sidebar .nav a{
+  background: none;
+  border-bottom: 1px solid #455A64;
+  color: #CFD8DC;
+  font-size: 14px;
+  padding: 16px 24px;
+}
+
+#sidebar .nav a:hover{
+  background: none;
+  color: #ECEFF1;
+}
+
+#sidebar .nav a i{
+  margin-right: 16px;
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="viewport">
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <header>
+      <a href="/"><h4>Agriculture Supply Chain optimization</h4></a>
+    </header>
+    <ul class="nav">
+      <li>
+        <a href="/">
+          <i class="zmdi zmdi-view-dashboard"></i> Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="/yield">
+          <i class="zmdi zmdi-link"></i> Yield prediction
+        </a>
+      </li>
+      <li>
+        <a href="/emission">
+          <i class="zmdi zmdi-widgets"></i> Emission prediction
+        </a>
+      </li>
+      <li>
+        <a href="/logistics">
+          <i class="zmdi zmdi-calendar"></i> Logistics Calculator
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Content -->
+  <div id="content">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#"><i class="zmdi zmdi-notifications text-danger"></i>
+            </a>
+          </li>
+          <li><a href="#"> User</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      
+      <p>
+        CultivateSuccess: Harnessing AI for Precision Agriculture Predictions and Optimal Crop Yield Strategies 
+        
+      </p>
+
+      <div class="container-fluid mt-4" id="emissions-form">
+        <h1>Emissions Prediction</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" class="form-control" required min="1900" max="3000">
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="emissions_type">Emissions Type:</label>
+                
+                <select id="emissions_type" name="emissions_type" class="form-control" required>
+                    <option value="">Select a Emission</option>
+                    <option value="CH4">CH4</option>
+                    <option value="CO2">CO2</option>
+                    <option value="CO2eq (AR5)">CO2eq (AR5)</option>
+                    <option value="(CO2eq) from CH4 (AR5)">(CO2eq) from CH4 (AR5)</option>
+                    <option value="(CO2eq) from F-gases (AR5)">(CO2eq) from F-gases (AR5)</option>
+                    <option value="(CO2eq) from N2O (AR5)">(CO2eq) from N2O (AR5)</option>
+
+                </select>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
